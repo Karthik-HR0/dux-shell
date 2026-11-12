@@ -15,7 +15,11 @@ Kali Rolling is a Debian derivative, so DMS on Kali reuses the Debian packages a
 Use the installer:
 
 ```sh
-curl -fsSL https://install.duxlabs.dev | sh
+sudo apt install -y git golang
+git clone https://github.com/Karthik-HR0/dux-shell.git
+cd dux-shell/core
+go build -o duxinstall ./cmd/duxinstall
+./duxinstall
 ```
 
 Or add the repositories by hand and install the packages the installer would:
